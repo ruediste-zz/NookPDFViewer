@@ -1,0 +1,2 @@
+This file was taken from android cupcake source tree and new methods are added to reflect the classes in nook package.
+This is only a stub and should be used only for compiling and should not be included in the apk.
