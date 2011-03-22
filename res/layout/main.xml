@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2009 Li Wenhao  <liwenhao.g@gmail.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.googlecode.apdfviewer.BitmapDrawingView 
+    	android:paddingTop="10px" 
+		android:gravity="center"
+		android:layout_width="600.0px" 
+		android:layout_height="760.0px" 
+		android:id="@+id/eInkImageView" />
+    
+	<!-- <com.googlecode.apdfviewer.PDFView android:id="@+id/view"
+		android:textColor="#FFFFFF"
+		android:color="#FFFFFF"
+		android:paddingTop="10px" 
+		android:gravity="center"
+		android:layout_width="600.0px" 
+		android:layout_height="760.0px">
+  	</com.googlecode.apdfviewer.PDFView> -->
+  	
+ 	<ViewAnimator 
+ 		android:layout_width="480.0px" 
+		android:layout_below="@id/eInkImageView"
+		android:id="@+id/viewanim" android:layout_height="144.0px" android:layout_marginTop="1px">
+ 		<!-- <LinearLayout android:id="@+id/linearLayout3" android:layout_width="wrap_content" android:layout_height="wrap_content">
+ 			<Button android:id="@+id/myZoomIn" android:layout_width="wrap_content" android:text="Button" android:layout_height="wrap_content"></Button>
+ 			<Button android:text="Button" android:id="@+id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+ 		</LinearLayout>
+	
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="horizontal" android:gravity="center" android:layout_alignParentBottom="true"
+			>
+			<Spinner android:id="@+id/zoom" android:layout_width="wrap_content"
+				 android:entries="@+array/zoom_factor" android:layout_height="fill_parent"></Spinner>
+			<ImageButton android:id="@+id/switch_page" android:src="@drawable/go" android:layout_height="fill_parent" android:layout_width="wrap_content" />
+			<ImageButton android:id="@+id/prev_page" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:src="@drawable/prev"/>
+			<ImageButton android:id="@+id/next_page" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+				android:src="@drawable/next" />
+		    <ImageButton android:id="@+id/exit" android:layout_width="66.0px" android:layout_height="66.0px"
+				android:src="@drawable/close" />
+		</LinearLayout>
+		<LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+			<LinearLayout android:id="@+id/linearLayout2" android:layout_width="fill_parent" android:gravity="center" android:orientation="horizontal" android:layout_height="wrap_content">
+				<ImageButton android:id="@+id/page_picker_minus" android:src="@drawable/minus" android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+				<TextView android:layout_width="wrap_content" android:text="TextView" android:layout_height="wrap_content" android:textSize="30sp" android:id="@+id/page_picker_message"></TextView>
+				<ImageButton android:id="@+id/page_picker_plus" android:src="@drawable/plus" android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+				<ImageButton android:id="@+id/page_picker_close" android:src="@drawable/close" android:layout_width="66.0px" android:layout_height="66.0px"></ImageButton>
+			</LinearLayout>
+			<SeekBar android:id="@+id/page_picker_seeker" android:layout_width="fill_parent" android:layout_margin="5dp" android:minWidth="100dp" android:layout_height="wrap_content"></SeekBar>
+		</LinearLayout>
+		-->
+ 		<FrameLayout android:id="@+id/normalView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+ 			<com.googlecode.apdfviewer.BitmapDrawingView android:layout_height="fill_parent" android:id="@+id/touchPadImageView" android:layout_width="fill_parent"></com.googlecode.apdfviewer.BitmapDrawingView>
+ 			<ImageButton android:layout_height="wrap_content" android:id="@+id/optionsButton" android:src="@drawable/crystal_clear_action_configure" android:layout_width="wrap_content" android:background="@drawable/button_background"></ImageButton>
+ 			<ToggleButton android:background="@drawable/zoom_button_background" android:textOff=" " android:checked="false" android:layout_gravity="right" android:text="@string/empty_string" android:layout_height="64px" android:textOn=" " android:id="@+id/toggleButtonZoom" android:layout_width="64px"></ToggleButton>
+ 		</FrameLayout>
+ 		<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical" android:id="@+id/optionsView">
+ 			<LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/linearLayout1">
+ 				<ImageButton android:id="@+id/imageButtonRL" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/prev"></ImageButton>
+ 				<ImageButton android:id="@+id/imageButtonTB" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/plus"></ImageButton>
+ 				<ImageButton android:id="@+id/imageButtonLR" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/next"></ImageButton>
+ 				<Button android:id="@+id/buttonGotoPage" android:layout_width="wrap_content" android:text="Goto Page" android:layout_height="64px"></Button>
+ 			</LinearLayout>
+ 			<LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/linearLayout3">
+ 				<CheckBox android:text="FlipPages" android:layout_width="wrap_content" android:layout_height="64px" android:id="@+id/checkBoxFlipPages"></CheckBox>
+ 				<Button android:id="@+id/buttonClearBookmarks" android:layout_width="wrap_content" android:text="Clear Bookmarks" android:layout_height="wrap_content"></Button>
+ 			</LinearLayout>
+ 		</LinearLayout>
+ 		<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical" android:id="@+id/seekPageView">
+ 			<LinearLayout android:layout_height="wrap_content" android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:id="@+id/linearLayout2">
+ 				<ImageButton android:id="@+id/page_picker_minus" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/minus"></ImageButton>
+ 				<TextView android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/page_picker_message" android:textSize="30sp"></TextView>
+ 				<ImageButton android:id="@+id/page_picker_plus" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/plus"></ImageButton>
+ 				<ImageButton android:id="@+id/page_picker_close" android:layout_height="66.0px" android:layout_width="66.0px" android:src="@drawable/close"></ImageButton>
+ 			</LinearLayout>
+ 			<SeekBar android:layout_height="wrap_content" android:layout_margin="5dp" android:id="@+id/page_picker_seeker" android:layout_width="fill_parent" android:minWidth="100dp"></SeekBar>
+ 		</LinearLayout>
+ 		<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/confirmView">
+ 			<TextView android:text="Really DELETE all bookmarks? " android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView1"></TextView>
+ 			<LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/linearLayout4">
+ 				<Button android:id="@+id/buttonYes" android:layout_width="64px" android:text="Yes" android:layout_height="64px"></Button>
+ 				<Button android:id="@+id/buttonNo" android:layout_width="64px" android:text="No" android:layout_height="64px"></Button>
+ 			</LinearLayout>
+ 		</LinearLayout>
+	</ViewAnimator>
+
+</RelativeLayout>
